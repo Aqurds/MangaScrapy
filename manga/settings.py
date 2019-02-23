@@ -1,3 +1,6 @@
+# import os
+# import configparser
+
 # -*- coding: utf-8 -*-
 
 # Scrapy settings for manga project
@@ -64,9 +67,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'manga.pipelines.MangaPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'manga.pipelines.MangaPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +91,14 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+
+# ## get mongodb params (using configparser)
+# config = configparser.ConfigParser()
+# config.read(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'settings.cfg'))
+#
+# MONGO_URI = 'mongodb://manga:2252010baby@ds249035.mlab.com:49035/aqurds'
+# MONGO_DATABASE = 'aqurds'
+#
+# # ...

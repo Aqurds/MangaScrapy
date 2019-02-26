@@ -31,7 +31,7 @@ class my_first_scrapy(scrapy.Spider):
         manga_details['author'] = response.xpath('//div[@class="manga-info-top"]/ul/li[2]/a/text()').extract()
         manga_details['status'] = response.xpath('//div[@class="manga-info-top"]/ul/li[3]/text()')[0].extract().split(' : ')[-1]
         manga_details['last_updated'] = response.xpath('//div[@class="manga-info-top"]/ul/li[4]/text()')[0].extract().split(' : ')[-1]
-        manga_details['view'] = response.xpath('//div[@class="manga-info-top"]/ul/li[6]/text()')[0].extract().split(' : ')[-1]
+        # manga_details['view'] = response.xpath('//div[@class="manga-info-top"]/ul/li[6]/text()')[0].extract().split(' : ')[-1]
         manga_details['genres'] = response.xpath('//div[@class="manga-info-top"]/ul/li[7]/a/text()').extract()
         manga_details['score'] = response.xpath('//em[@id="rate_row_cmd"]/em/em[2]/em/em[1]/text()')[0].extract()
         manga_details['votes'] = response.xpath('//em[@id="rate_row_cmd"]/em/em[3]/text()')[0].extract()

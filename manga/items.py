@@ -22,7 +22,7 @@ class MangaDetails(scrapy.Item):
     author = scrapy.Field()
     status = scrapy.Field()
     last_updated = scrapy.Field()
-    view = scrapy.Field()
+    # view = scrapy.Field()
     genres = scrapy.Field()
     score = scrapy.Field()
     votes = scrapy.Field()
@@ -36,7 +36,7 @@ class MangaChapterList(scrapy.Item):
     chapter_id = scrapy.Field()
     full_chapter_url = scrapy.Field()
     chapter_link_text = scrapy.Field()
-    chapter_view = scrapy.Field()
+    # chapter_view = scrapy.Field()
     chapter_time_uploaded = scrapy.Field()
 
 

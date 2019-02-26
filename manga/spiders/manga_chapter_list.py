@@ -36,7 +36,7 @@ class my_first_scrapy(scrapy.Spider):
 
         manga_chapter_list['full_chapter_url'] = response.xpath('//div[@class="row"]/span[1]/a/@href').extract()
         manga_chapter_list['chapter_link_text'] = response.xpath('//div[@class="row"]/span[1]/a/text()').extract()
-        manga_chapter_list['chapter_view'] = response.xpath('//div[@class="row"]/span[2]/text()').extract()
+        # manga_chapter_list['chapter_view'] = response.xpath('//div[@class="row"]/span[2]/text()').extract()
         manga_chapter_list['chapter_time_uploaded'] = response.xpath('//div[@class="row"]/span[3]/text()').extract()
 
 

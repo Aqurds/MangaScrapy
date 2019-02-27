@@ -68,4 +68,5 @@ class LatestMangaReleasesIdFrontPage(scrapy.Item):
 # This Item will collect full image list from each manga chapter and will store with manga id
 class MangaEachChapterImageListWithMangaId(scrapy.Item):
     manga_id = scrapy.Field()
+    chapter_id = scrapy.Field()
     manga_each_chapter_image_list_with_manga_id = scrapy.Field()

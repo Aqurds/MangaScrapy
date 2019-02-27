@@ -25,7 +25,9 @@ class my_first_scrapy(scrapy.Spider):
 
 
 
-        manga_chapter_url['manga_id'] = response.xpath('//div[@class="vung-doc"]/img[1]/@src')[0].extract().split('/')[-2]
+        manga_chapter_url['manga_id'] = response.xpath('//div[@class="vung-doc"]/img[1]/@src')[0].extract().split('/')[-3]
+
+        manga_chapter_url['chapter_id'] = response.xpath('//div[@class="vung-doc"]/img[1]/@src')[0].extract().split('/')[-2]
 
         manga_chapter_url['manga_each_chapter_image_list_with_manga_id'] = response.xpath('//div[@class="vung-doc"]/img/@src').extract()
 

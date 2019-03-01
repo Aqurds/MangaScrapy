@@ -11,7 +11,7 @@ class my_first_scrapy(scrapy.Spider):
 
     start_urls = []
     url_dict = ''
-
+    #getting the urls form json file
     with open('manga_name.json', 'r') as f:
         url_dict = json.load(f)
 
